@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Lawson - All Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 transition-all duration-300 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">Caleb Lawson</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
+                <a href="projects.html" class="text-cyan-400 font-semibold transition-colors">Projects</a>
+                <a href="index.html#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="index.html#resume" class="text-gray-300 hover:text-cyan-400 transition-colors">Resume</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html#about" class="block py-2 text-gray-300 hover:text-cyan-400">About</a>
+            <a href="projects.html" class="block py-2 text-cyan-400 font-semibold">Projects</a>
+            <a href="index.html#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Skills</a>
+            <a href="index.html#resume" class="block py-2 text-gray-300 hover:text-cyan-400">Resume</a>
+            <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-cyan-400">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-12">
+        <!-- All Projects Section -->
+        <section id="all-projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">All Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Drone+Swarm" alt="Drone Swarm Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Autonomous Drone Swarm for Wildfire Assistance</h3>
+                            <p class="text-gray-400 mb-4">A capstone project featuring a drone swarm to provide firefighters with real-time data on topology, wind, and fire locations to update containment lines.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Drones</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">System Design</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">C++ / Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Actuating+Pillow" alt="Linear Actuating Pillow Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Linear Actuating Pillow</h3>
+                            <p class="text-gray-400 mb-4">A therapeutic back pillow with six adjustable pads, designed to give wheelchair users more control over their lumbar support and comfort.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SolidWorks</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">3D Printing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Ionic+Thruster" alt="Ionic Thruster Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Ionic Thruster</h3>
+                            <p class="text-gray-400 mb-4">Designed and built a functional thruster that uses ionized air to generate thrust without any moving parts or combustion.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SolidWorks</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">High Voltage Electronics</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">R&D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Thermometer" alt="Electronic Thermometer Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Electronic Thermometer</h3>
+                            <p class="text-gray-400 mb-4">A project to understand how thermometers work by creating one with a thermistor and Arduino, achieving results accurate to +/- 0.1°C.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Circuit Design</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Debugging</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Elevator+Control" alt="Elevator Control System Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Elevator Control System</h3>
+                            <p class="text-gray-400 mb-4">A simulation of an elevator control system for floors 0-3, designed using logic gates and implemented on a microcontroller.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Logic Gates</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Microcontrollers</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">System Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Speed+Controller" alt="Velocity Speed Controller Project" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Velocity Speed Controller</h3>
+                            <p class="text-gray-400 mb-4">Designed and simulated a DC motor controller to achieve specific performance requirements using MATLAB and Simulink.</p>
+                            <div class="mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MATLAB</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Simulink</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Control Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/caleblawson102/" target="_blank" class="hover:text-cyan-400"><i data-lucide="linkedin"></i></a>
+                <!-- Add GitHub link here when available -->
+                <!-- <a href="#" class="hover:text-cyan-400"><i data-lucide="github"></i></a> -->
+            </div>
+            <p>&copy; 2024 Caleb Lawson. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
