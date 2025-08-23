@@ -70,7 +70,9 @@
                     
                     <!-- Project Card 1 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal1">
-                        <img src="https://i.imgur.com/n7N7JPL.png" alt="Mapping and Predicting Wildfires Project" class="w-full h-56 object-cover">
+                        <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/n7N7JPL.png" alt="Mapping and Predicting Wildfires Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Mapping and Predicting Wildfires</h3>
                             <p class="text-gray-400 mb-4">A capstone project featuring a drone swarm to provide firefighters with real-time data on topology, wind, and fire locations...</p>
@@ -79,7 +81,9 @@
 
                     <!-- Project Card 2 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical software" data-modal="modal2">
-                        <img src="https://i.imgur.com/C0iv781.png" alt="Linear Actuating Pillow Project" class="w-full h-56 object-cover">
+                         <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/C0iv781.png" alt="Linear Actuating Pillow Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Linear Actuating Pillow</h3>
                             <p class="text-gray-400 mb-4">A therapeutic back pillow with six adjustable pads, designed to give wheelchair users more control over their lumbar support and comfort.</p>
@@ -88,7 +92,9 @@
 
                     <!-- Project Card 3 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical" data-modal="modal3">
-                        <img src="https://i.imgur.com/WCBfY1n.jpeg" alt="Ionic Thruster Project" class="w-full h-56 object-cover">
+                        <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/WCBfY1n.jpeg" alt="Ionic Thruster Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Ionic Thruster</h3>
                             <p class="text-gray-400 mb-4">Designed and built a functional thruster that uses ionized air to generate thrust without any moving parts or combustion.</p>
@@ -97,7 +103,9 @@
 
                     <!-- Project Card 4 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal4">
-                        <img src="https://i.imgur.com/RO9ixxL.jpeg" alt="Electronic Thermometer Project" class="w-full h-56 object-cover">
+                        <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/RO9ixxL.jpeg" alt="Electronic Thermometer Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Electronic Thermometer</h3>
                             <p class="text-gray-400 mb-4">A project to understand how thermometers work by creating one with a thermistor and Arduino, achieving results accurate to +/- 0.1°C.</p>
@@ -106,7 +114,9 @@
 
                     <!-- Project Card 5 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal5">
-                        <img src="https://i.imgur.com/EQ87jwe.jpeg" alt="Elevator Control System Project" class="w-full h-56 object-cover">
+                        <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/EQ87jwe.jpeg" alt="Elevator Control System Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Elevator Control System</h3>
                             <p class="text-gray-400 mb-4">A simulation of an elevator control system for floors 0-3, designed using logic gates and implemented on a microcontroller.</p>
@@ -115,7 +125,9 @@
 
                     <!-- Project Card 6 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal6">
-                        <img src="https://i.imgur.com/FCN3p6O.png" alt="Velocity Speed Controller Project" class="w-full h-56 object-cover">
+                        <div class="w-full h-56 bg-black flex items-center justify-center">
+                            <img src="https://i.imgur.com/FCN3p6O.png" alt="Velocity Speed Controller Project" class="w-full h-full object-contain">
+                        </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Velocity Speed Controller</h3>
                             <p class="text-gray-400 mb-4">Designed and simulated a DC motor controller to achieve specific performance requirements using MATLAB and Simulink.</p>
@@ -236,14 +248,10 @@
         const projectCards = document.querySelectorAll('.project-card');
         let currentImageIndex = 0;
 
-        function showImage(index, images) {
+        function showImage(index) {
             const gallery = document.querySelector('.gallery-container');
-            const counter = document.querySelector('.image-counter');
             if (gallery) {
                 gallery.scrollTo({ left: gallery.clientWidth * index, behavior: 'smooth' });
-            }
-            if(counter) {
-                counter.textContent = `${index + 1} / ${images.length}`;
             }
         }
 
@@ -261,7 +269,7 @@
                             </button>
                             
                             <div class="relative">
-                                <div class="gallery-container w-full h-96 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth">
+                                <div class="gallery-container w-full h-96 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth bg-black">
                                     ${project.images.map((imgData, index) => `
                                         <div class="w-full flex-shrink-0 snap-center flex flex-col items-center justify-center p-4">
                                             <img src="${imgData.src}" alt="${project.title} image ${index + 1}" class="max-w-full max-h-80 object-contain">
@@ -276,9 +284,6 @@
                                 <button class="next-btn absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/75">
                                     <i data-lucide="chevron-right"></i>
                                 </button>
-                                <div class="image-counter absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 px-2 py-1 rounded-md text-sm text-white">
-                                    1 / ${project.images.length}
-                                </div>
                                 ` : ''}
                             </div>
 
@@ -325,11 +330,11 @@
                 if (project.images.length > 1) {
                     document.querySelector(`#${modalId} .prev-btn`).addEventListener('click', () => {
                         currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
-                        showImage(currentImageIndex, project.images);
+                        showImage(currentImageIndex);
                     });
                     document.querySelector(`#${modalId} .next-btn`).addEventListener('click', () => {
                         currentImageIndex = (currentImageIndex + 1) % project.images.length;
-                        showImage(currentImageIndex, project.images);
+                        showImage(currentImageIndex);
                     });
                 }
             });
