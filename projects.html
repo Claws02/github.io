@@ -13,6 +13,9 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .project-card {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -46,90 +49,68 @@
         <!-- All Projects Section -->
         <section id="all-projects" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-white mb-12">All Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-4">All Projects</h2>
+                <!-- Filter Buttons -->
+                <div id="filter-buttons" class="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap">
+                    <button class="filter-btn bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg" data-filter="all">All</button>
+                    <button class="filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg" data-filter="electrical">Electrical</button>
+                    <button class="filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg" data-filter="mechanical">Mechanical</button>
+                    <button class="filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg" data-filter="software">Software</button>
+                </div>
+
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Project Card 1 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal1">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Drone+Swarm" alt="Drone Swarm Project" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Autonomous Drone Swarm for Wildfire Assistance</h3>
-                            <p class="text-gray-400 mb-4">A capstone project featuring a drone swarm to provide firefighters with real-time data on topology, wind, and fire locations to update containment lines.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Drones</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">System Design</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">C++ / Python</span>
-                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Autonomous Drone Swarm</h3>
+                            <p class="text-gray-400">A capstone project featuring a drone swarm for wildfire assistance...</p>
                         </div>
                     </div>
 
                     <!-- Project Card 2 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical software" data-modal="modal2">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Actuating+Pillow" alt="Linear Actuating Pillow Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Linear Actuating Pillow</h3>
-                            <p class="text-gray-400 mb-4">A therapeutic back pillow with six adjustable pads, designed to give wheelchair users more control over their lumbar support and comfort.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SolidWorks</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">3D Printing</span>
-                            </div>
+                            <p class="text-gray-400">A therapeutic back pillow with six adjustable pads for wheelchair users...</p>
                         </div>
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical" data-modal="modal3">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Ionic+Thruster" alt="Ionic Thruster Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Ionic Thruster</h3>
-                            <p class="text-gray-400 mb-4">Designed and built a functional thruster that uses ionized air to generate thrust without any moving parts or combustion.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SolidWorks</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">High Voltage Electronics</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">R&D</span>
-                            </div>
+                            <p class="text-gray-400">A thruster that uses ionized air to generate thrust without moving parts...</p>
                         </div>
                     </div>
 
                     <!-- Project Card 4 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal4">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Thermometer" alt="Electronic Thermometer Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Electronic Thermometer</h3>
-                            <p class="text-gray-400 mb-4">A project to understand how thermometers work by creating one with a thermistor and Arduino, achieving results accurate to +/- 0.1°C.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Circuit Design</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Debugging</span>
-                            </div>
+                            <p class="text-gray-400">A custom-built thermometer using a thermistor and Arduino...</p>
                         </div>
                     </div>
 
                     <!-- Project Card 5 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal5">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Elevator+Control" alt="Elevator Control System Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Elevator Control System</h3>
-                            <p class="text-gray-400 mb-4">A simulation of an elevator control system for floors 0-3, designed using logic gates and implemented on a microcontroller.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Logic Gates</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Microcontrollers</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">System Design</span>
-                            </div>
+                            <p class="text-gray-400">A simulation of an elevator control system using logic gates...</p>
                         </div>
                     </div>
 
                     <!-- Project Card 6 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal6">
                         <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Speed+Controller" alt="Velocity Speed Controller Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Velocity Speed Controller</h3>
-                            <p class="text-gray-400 mb-4">Designed and simulated a DC motor controller to achieve specific performance requirements using MATLAB and Simulink.</p>
-                            <div class="mb-4">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MATLAB</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Simulink</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Control Systems</span>
-                            </div>
+                            <p class="text-gray-400">A DC motor controller designed to meet specific performance requirements...</p>
                         </div>
                     </div>
 
@@ -138,13 +119,16 @@
         </section>
     </main>
 
+    <!-- Project Modals -->
+    <div id="modal-container">
+        <!-- Modals will be injected here by JavaScript -->
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-900 py-8">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="https://www.linkedin.com/in/caleblawson102/" target="_blank" class="hover:text-cyan-400"><i data-lucide="linkedin"></i></a>
-                <!-- Add GitHub link here when available -->
-                <!-- <a href="#" class="hover:text-cyan-400"><i data-lucide="github"></i></a> -->
             </div>
             <p>&copy; 2024 Caleb Lawson. All Rights Reserved.</p>
         </div>
@@ -161,12 +145,109 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        // Project Data
+        const projects = {
+            modal1: {
+                title: 'Autonomous Drone Swarm for Wildfire Assistance',
+                description: 'A capstone project featuring a drone swarm to provide firefighters with real-time data on topology, wind, and fire locations to continuously update containment lines, giving first responders a critical advantage.',
+                tags: ['Drones', 'System Design', 'C++', 'Python', 'Risk Assessment'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Drone+Swarm'
+            },
+            modal2: {
+                title: 'Linear Actuating Pillow',
+                description: 'A therapeutic back pillow with six different sections of adjustable pads, designed to give wheelchair users more control over their lumbar support and comfort. The system uses linear actuators controlled by an Arduino.',
+                tags: ['SolidWorks', 'Arduino', '3D Printing', 'Circuit Design', 'Prototyping'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Actuating+Pillow'
+            },
+            modal3: {
+                title: 'Ionic Thruster',
+                description: 'Designed and built a functional thruster that uses ionized air to generate thrust without any moving parts or combustion. This project explored the effects of corona discharge distances on thrust.',
+                tags: ['SolidWorks', 'High Voltage Electronics', 'R&D', 'Prototyping'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Ionic+Thruster'
+            },
+            modal4: {
+                title: 'Electronic Thermometer',
+                description: 'A project to understand how thermometers work by creating one with a thermistor, Arduino, and a voltage divider. The final device achieved results accurate to +/- 0.1°C.',
+                tags: ['Arduino', 'Circuit Design', 'Debugging', 'Data Acquisition'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Thermometer'
+            },
+            modal5: {
+                title: 'Elevator Control System',
+                description: 'A simulation of an elevator control system for floors 0-3, designed using logic gates and implemented on a microcontroller. The system includes basic elevator functionality, reliability, and efficiency.',
+                tags: ['Logic Gates', 'Microcontrollers', 'System Design', 'Simulation'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Elevator+Control'
+            },
+            modal6: {
+                title: 'Velocity Speed Controller',
+                description: 'Designed and simulated a DC motor controller to achieve specific performance requirements (%Overshoot ≤ 1%, settling time < 0.05s) using MATLAB and Simulink. The project involved deriving the motor\'s transfer function and designing a feedback controller.',
+                tags: ['MATLAB', 'Simulink', 'Control Systems', 'Mathematical Modeling'],
+                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Speed+Controller'
+            }
+        };
+
+        // Modal Logic
+        const modalContainer = document.getElementById('modal-container');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.dataset.modal;
+                const project = projects[modalId];
+                
+                const modalHTML = `
+                    <div id="${modalId}" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+                        <div class="bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-full overflow-y-auto relative">
+                            <button class="close-modal absolute top-4 right-4 text-gray-400 hover:text-white">
+                                <i data-lucide="x"></i>
+                            </button>
+                            <img src="${project.img}" alt="${project.title}" class="w-full h-64 object-cover rounded-t-lg">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2">${project.title}</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    ${project.tags.map(tag => `<span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">${tag}</span>`).join('')}
+                                </div>
+                                <p class="text-gray-300">${project.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                modalContainer.innerHTML = modalHTML;
+                lucide.createIcons();
+
+                document.querySelector(`#${modalId} .close-modal`).addEventListener('click', () => {
+                    modalContainer.innerHTML = '';
+                });
             });
         });
+
+        // Filter Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectsGrid = document.getElementById('projects-grid');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update button styles
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-cyan-500');
+                    btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
+                });
+                button.classList.add('bg-cyan-500');
+                button.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+
+                const filter = button.dataset.filter;
+
+                projectCards.forEach(card => {
+                    const categories = card.dataset.category.split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 </html>
