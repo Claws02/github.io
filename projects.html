@@ -16,6 +16,14 @@
         .project-card {
             cursor: pointer;
         }
+        /* Hide scrollbar for the modal gallery */
+        .gallery-container::-webkit-scrollbar {
+            display: none;
+        }
+        .gallery-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -62,85 +70,55 @@
                     
                     <!-- Project Card 1 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal1">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Drone+Swarm" alt="Drone Swarm Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/n7N7JPL.png" alt="Mapping and Predicting Wildfires Project" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Autonomous Drone Swarm</h3>
+                            <h3 class="text-xl font-bold text-white mb-2">Mapping and Predicting Wildfires</h3>
                             <p class="text-gray-400 mb-4">A capstone project featuring a drone swarm to provide firefighters with real-time data on topology, wind, and fire locations...</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Drones</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">System Design</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">C++ / Python</span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card 2 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical software" data-modal="modal2">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Actuating+Pillow" alt="Linear Actuating Pillow Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/C0iv781.png" alt="Linear Actuating Pillow Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Linear Actuating Pillow</h3>
                             <p class="text-gray-400 mb-4">A therapeutic back pillow with six adjustable pads, designed to give wheelchair users more control over their lumbar support and comfort.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">SolidWorks</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Arduino</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">3D Printing</span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card 3 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical" data-modal="modal3">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Ionic+Thruster" alt="Ionic Thruster Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/WCBfY1n.jpeg" alt="Ionic Thruster Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Ionic Thruster</h3>
                             <p class="text-gray-400 mb-4">Designed and built a functional thruster that uses ionized air to generate thrust without any moving parts or combustion.</p>
-                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">SolidWorks</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">High Voltage Electronics</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">R&D</span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card 4 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal4">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Thermometer" alt="Electronic Thermometer Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/RO9ixxL.jpeg" alt="Electronic Thermometer Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Electronic Thermometer</h3>
                             <p class="text-gray-400 mb-4">A project to understand how thermometers work by creating one with a thermistor and Arduino, achieving results accurate to +/- 0.1°C.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Arduino</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Circuit Design</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Debugging</span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card 5 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal5">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Elevator+Control" alt="Elevator Control System Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/EQ87jwe.jpeg" alt="Elevator Control System Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Elevator Control System</h3>
                             <p class="text-gray-400 mb-4">A simulation of an elevator control system for floors 0-3, designed using logic gates and implemented on a microcontroller.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Logic Gates</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Microcontrollers</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">System Design</span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Project Card 6 -->
                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal6">
-                        <img src="https://placehold.co/600x400/1F2937/7DD3FC?text=Speed+Controller" alt="Velocity Speed Controller Project" class="w-full h-56 object-cover">
+                        <img src="https://i.imgur.com/FCN3p6O.png" alt="Velocity Speed Controller Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Velocity Speed Controller</h3>
                             <p class="text-gray-400 mb-4">Designed and simulated a DC motor controller to achieve specific performance requirements using MATLAB and Simulink.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">MATLAB</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Simulink</span>
-                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded">Control Systems</span>
-                            </div>
                         </div>
                     </div>
 
@@ -178,79 +156,158 @@
         // Project Data with detailed info for modals
         const projects = {
             modal1: {
-                title: 'Autonomous Drone Swarm for Wildfire Assistance',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Drone+Swarm',
+                title: 'Mapping and Predicting Wildfires',
+                images: [
+                    { src: 'https://i.imgur.com/n7N7JPL.png', caption: 'Drone swarm simulation in action.' },
+                    { src: 'https://i.imgur.com/s3x8c4t.png', caption: 'Containment line drawn using TensorFlow.' },
+                    { src: 'https://i.imgur.com/SUSKdiZ.png', caption: 'Crazyflie drone and control equipment.' },
+                    { src: 'https://i.imgur.com/485HbJQ.png', caption: "Flow chart detailing the swarm's operational logic." },
+                    { src: 'https://i.imgur.com/YHGixPB.png', caption: 'Floor pattern and path of the leader drone.' }
+                ],
                 problem: 'Firefighters need better real-time information to combat wildfires effectively and ensure their safety.',
                 scope: 'To research, design, and engineer a drone swarm technology that provides autonomous, real-time data on topology, wind, main fire locations, and spot fires to continuously update containment lines.',
-                results: 'A functional system concept that improves situational awareness for first responders, allowing for more strategic and safer wildfire management.'
+                whatIDid: 'Coordinated schedules and checked for clashes and risks while working with an interdisciplinary team to research, design, and engineer the drone swarm technology.',
+                results: 'A functional system concept that improves situational awareness for first responders, allowing for more strategic and safer wildfire management.',
+                recommendations: 'Further development into autonomous charging stations and integration with existing wildfire management software.'
             },
             modal2: {
                 title: 'Linear Actuating Pillow',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Actuating+Pillow',
+                images: [
+                    { src: 'https://i.imgur.com/C0iv781.png', caption: 'SolidWorks model of the main pillow body.' },
+                    { src: 'https://i.imgur.com/NDYZFc1.png', caption: 'SolidWorks model of a corner pad.' },
+                    { src: 'https://i.imgur.com/l7TTYSK.png', caption: 'SolidWorks model of a middle pad.' }
+                ],
                 problem: 'Lumbar support and comfort for wheelchair-bound persons is a lacking field when it comes to user-adjustable options, often needing external assistance.',
                 scope: 'Create a back pillow with 6 different sections of adjustable pads for immediate and simple adjustments, giving wheelchair-bound persons more freedom.',
-                results: 'Functioning controls on Linear Actuators, giving slow and precise increments in adjusting panels for back support.'
+                whatIDid: 'Designed the wiring diagram and embedded software with Arduino. Created the mechanical design in SolidWorks.',
+                results: 'Functioning controls on Linear Actuators, giving slow and precise increments in adjusting panels for back support.',
+                recommendations: 'Curve pads for more comfort, possibility of personalization for curvature of individuals\' backs, create save-able settings of pad positioning.'
             },
             modal3: {
                 title: 'Ionic Thruster',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Ionic+Thruster',
+                images: [
+                    { src: 'https://i.imgur.com/WCBfY1n.jpeg', caption: 'Completed model of the Ionic Thruster.' }
+                ],
                 problem: 'Does changing the distance of a corona discharge have an effect on thrust?',
                 scope: 'Design and create a functional thruster without the use of moving parts or combustion to test the hypothesis.',
-                results: 'No, changing the distance of the corona discharge does not affect the thrust notably. Recommendations include testing more geometries and higher voltages.'
+                whatIDid: 'Researched ionized air thrust, designed and assembled the high voltage input, and created the mechanical design in SolidWorks.',
+                results: 'No, changing the distance of the corona discharge does not affect the thrust notably.',
+                recommendations: 'Try more geometries for the thruster. Try more needles for more points of creating the corona discharge, try higher voltage.'
             },
             modal4: {
                 title: 'Electronic Thermometer',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Thermometer',
+                images: [
+                    { src: 'https://i.imgur.com/RO9ixxL.jpeg', caption: 'Completed circuit of the Electrical Thermometer.' }
+                ],
                 problem: 'A desire to understand the fundamental principles of how electronic thermometers work.',
                 scope: 'Create an Electronic Thermometer using a thermistor, Arduino, and a voltage divider.',
-                results: 'A functioning thermometer giving precise readings accurate to +/- 0.1°C. The project successfully demonstrated the concept.'
+                whatIDid: 'Created the wiring diagram, developed the embedded software with Arduino, assembled the wiring on a breadboard, and debugged for accuracy.',
+                results: 'A functioning thermometer giving precise readings accurate to +/- 0.1°C.',
+                recommendations: 'Try assembly using a potentiometer and re-iterate for correct temperature readings. Try creating a PCB to create a smaller, portable thermometer.'
             },
             modal5: {
                 title: 'Elevator Control System',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Elevator+Control',
+                images: [
+                    { src: 'https://i.imgur.com/EQ87jwe.jpeg', caption: 'Microcontroller demonstrating elevator floor changes.' },
+                    { src: 'https://i.imgur.com/STtB0dI.png', caption: 'Logic gate path for the control system.' }
+                ],
                 problem: 'A desire to understand the logic and decision-making processes within an elevator.',
                 scope: 'Create an elevator control system using logic gates and simulate its functionality for a 4-floor building (0-3) on a microcontroller.',
-                results: 'A functioning elevator control system simulation that correctly handles floor requests and includes an E-stop feature.'
+                whatIDid: 'Designed a logic diagram which follows basic elevator functionality, reliability, and efficiency.',
+                results: 'A functioning elevator control system simulation that correctly handles floor requests and includes an E-stop feature.',
+                recommendations: 'Try to incorporate more floors and acceleration/speed control between floors.'
             },
             modal6: {
                 title: 'Velocity Speed Controller',
-                img: 'https://placehold.co/600x400/1F2937/7DD3FC?text=Speed+Controller',
+                images: [
+                    { src: 'https://i.imgur.com/FCN3p6O.png', caption: 'MATLAB Simulink model of the speed controller.' },
+                    { src: 'https://i.imgur.com/hYyNEfm.png', caption: 'Comparison of actual vs. simulated step input.' }
+                ],
                 problem: 'A DC motor must achieve an angular velocity of 15 rad/s with zero steady-state error, a %Overshoot of ≤1%, and a settling time of less than 0.05 seconds.',
                 scope: 'Derive a mathematical model of the motor\'s transfer function, analyze its open-loop response, design a velocity speed controller to meet the requirements, and validate through simulation and testing.',
-                results: 'A functioning Velocity Speed Controller was created. The settling time was slightly off from the simulation due to real-world factors, but the controller met the primary performance goals.'
+                whatIDid: 'Mathematically modeled the motor\'s transfer function and derived the velocity speed controller feedback response. Simulated on MATLAB and Simulink to validate performance and tested the controller.',
+                results: 'A functioning Velocity Speed Controller was created. The settling time was slightly off from the simulation due to real-world factors, but the controller met the primary performance goals.',
+                recommendations: 'Try to integrate into different equipment such as conveyor belts, robotic arms, or pumps and compressors.'
             }
         };
 
         // Modal Logic
         const modalContainer = document.getElementById('modal-container');
         const projectCards = document.querySelectorAll('.project-card');
+        let currentImageIndex = 0;
+
+        function showImage(index, images) {
+            const gallery = document.querySelector('.gallery-container');
+            const counter = document.querySelector('.image-counter');
+            if (gallery) {
+                gallery.scrollTo({ left: gallery.clientWidth * index, behavior: 'smooth' });
+            }
+            if(counter) {
+                counter.textContent = `${index + 1} / ${images.length}`;
+            }
+        }
 
         projectCards.forEach(card => {
             card.addEventListener('click', () => {
                 const modalId = card.dataset.modal;
                 const project = projects[modalId];
+                currentImageIndex = 0;
                 
                 const modalHTML = `
                     <div id="${modalId}" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50" onclick="closeModal(event)">
-                        <div class="bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative" onclick="event.stopPropagation()">
-                            <button class="close-modal absolute top-4 right-4 text-gray-400 hover:text-white">
+                        <div class="bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative" onclick="event.stopPropagation()">
+                            <button class="close-modal absolute top-4 right-4 text-gray-400 hover:text-white z-20">
                                 <i data-lucide="x"></i>
                             </button>
-                            <img src="${project.img}" alt="${project.title}" class="w-full h-64 object-cover rounded-t-lg">
+                            
+                            <div class="relative">
+                                <div class="gallery-container w-full h-96 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth">
+                                    ${project.images.map((imgData, index) => `
+                                        <div class="w-full flex-shrink-0 snap-center flex flex-col items-center justify-center p-4">
+                                            <img src="${imgData.src}" alt="${project.title} image ${index + 1}" class="max-w-full max-h-80 object-contain">
+                                            <p class="text-sm text-gray-400 mt-2 text-center">${imgData.caption}</p>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                ${project.images.length > 1 ? `
+                                <button class="prev-btn absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/75">
+                                    <i data-lucide="chevron-left"></i>
+                                </button>
+                                <button class="next-btn absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/75">
+                                    <i data-lucide="chevron-right"></i>
+                                </button>
+                                <div class="image-counter absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 px-2 py-1 rounded-md text-sm text-white">
+                                    1 / ${project.images.length}
+                                </div>
+                                ` : ''}
+                            </div>
+
                             <div class="p-8">
                                 <h3 class="text-3xl font-bold text-white mb-6">${project.title}</h3>
-                                <div class="space-y-6 text-gray-300">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-cyan-400 mb-2">Problem</h4>
-                                        <p>${project.problem}</p>
+                                <div class="grid md:grid-cols-2 gap-8 text-gray-300">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-cyan-400 mb-2">Problem</h4>
+                                            <p>${project.problem}</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-cyan-400 mb-2">Scope</h4>
+                                            <p>${project.scope}</p>
+                                        </div>
+                                         <div>
+                                            <h4 class="text-xl font-semibold text-cyan-400 mb-2">What I Did</h4>
+                                            <p>${project.whatIDid}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-cyan-400 mb-2">Scope</h4>
-                                        <p>${project.scope}</p>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-cyan-400 mb-2">Results</h4>
-                                        <p>${project.results}</p>
+                                    <div class="space-y-6">
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-cyan-400 mb-2">Results</h4>
+                                            <p>${project.results}</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-cyan-400 mb-2">Recommendations</h4>
+                                            <p>${project.recommendations}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -264,6 +321,17 @@
                 document.querySelector(`#${modalId} .close-modal`).addEventListener('click', () => {
                     modalContainer.innerHTML = '';
                 });
+
+                if (project.images.length > 1) {
+                    document.querySelector(`#${modalId} .prev-btn`).addEventListener('click', () => {
+                        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+                        showImage(currentImageIndex, project.images);
+                    });
+                    document.querySelector(`#${modalId} .next-btn`).addEventListener('click', () => {
+                        currentImageIndex = (currentImageIndex + 1) % project.images.length;
+                        showImage(currentImageIndex, project.images);
+                    });
+                }
             });
         });
         
@@ -279,7 +347,6 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Update button styles
                 filterButtons.forEach(btn => {
                     btn.classList.remove('bg-cyan-500');
                     btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
