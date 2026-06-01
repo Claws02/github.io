@@ -17,12 +17,58 @@
             cursor: pointer;
         }
         /* Hide scrollbar for the modal gallery */
-        .gallery-container::-webkit-scrollbar {
-            display: none;
-        }
+        .gallery-container::-webkit-scrollbar { display: none; }
         .gallery-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* ── SpotlightCard ──────────────────────────────────────────── */
+        .card-spotlight {
+            position: relative;
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+            --spotlight-color: rgba(6, 182, 212, 0.18);
+        }
+        .card-spotlight::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(
+                circle at var(--mouse-x) var(--mouse-y),
+                var(--spotlight-color),
+                transparent 70%
+            );
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .card-spotlight:hover::before { opacity: 1; }
+
+        /* ── 3-D Tilt ───────────────────────────────────────────────── */
+        .tilt-card {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.08s linear, box-shadow 0.3s ease;
+        }
+        .tilt-card:hover {
+            box-shadow: 0 20px 60px rgba(6, 182, 212, 0.25);
+        }
+
+        /* ── Page title gradient ────────────────────────────────────── */
+        .gradient-text {
+            background: linear-gradient(90deg, #22d3ee 0%, #818cf8 50%, #22d3ee 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 6s linear infinite;
+        }
+        @keyframes gradient-shift {
+            0%   { background-position: 0%   center; }
+            100% { background-position: 200% center; }
         }
     </style>
 </head>
@@ -57,7 +103,7 @@
         <!-- All Projects Section -->
         <section id="all-projects" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-white mb-4">All Projects</h2>
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">All Projects</h2>
                 <!-- Filter Buttons -->
                 <div id="filter-buttons" class="flex justify-center gap-2 md:gap-4 mb-12 flex-wrap">
                     <button class="filter-btn bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg" data-filter="all">All</button>
@@ -69,7 +115,7 @@
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Project Card 1 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal1">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="electrical software" data-modal="modal1">
                         <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/n7N7JPL.png" alt="Mapping and Predicting Wildfires Project" class="w-full h-full object-contain">
                         </div>
@@ -80,7 +126,7 @@
                     </div>
 
                     <!-- Project Card 2 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical software" data-modal="modal2">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="mechanical electrical software" data-modal="modal2">
                          <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/C0iv781.png" alt="Linear Actuating Pillow Project" class="w-full h-full object-contain">
                         </div>
@@ -91,7 +137,7 @@
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="mechanical electrical" data-modal="modal3">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="mechanical electrical" data-modal="modal3">
                         <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/WCBfY1n.jpeg" alt="Ionic Thruster Project" class="w-full h-full object-contain">
                         </div>
@@ -102,7 +148,7 @@
                     </div>
 
                     <!-- Project Card 4 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal4">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="electrical software" data-modal="modal4">
                         <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/RO9ixxL.jpeg" alt="Electronic Thermometer Project" class="w-full h-full object-contain">
                         </div>
@@ -113,7 +159,7 @@
                     </div>
 
                     <!-- Project Card 5 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal5">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="electrical software" data-modal="modal5">
                         <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/EQ87jwe.jpeg" alt="Elevator Control System Project" class="w-full h-full object-contain">
                         </div>
@@ -124,7 +170,7 @@
                     </div>
 
                     <!-- Project Card 6 -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300 transform hover:-translate-y-2" data-category="electrical software" data-modal="modal6">
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 card-spotlight tilt-card" data-category="electrical software" data-modal="modal6">
                         <div class="w-full h-56 bg-black flex items-center justify-center">
                             <img src="https://i.imgur.com/FCN3p6O.png" alt="Velocity Speed Controller Project" class="w-full h-full object-contain">
                         </div>
@@ -369,6 +415,29 @@
                         card.style.display = 'none';
                     }
                 });
+            });
+        });
+
+        // ── SpotlightCard – cursor-following radial glow ─────────────────
+        document.querySelectorAll('.card-spotlight').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+            });
+        });
+
+        // ── 3-D Tilt on project cards ────────────────────────────────────
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            const TILT = 8;
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const dx   = (e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2);
+                const dy   = (e.clientY - rect.top  - rect.height / 2) / (rect.height / 2);
+                card.style.transform = `perspective(600px) rotateY(${dx * TILT}deg) rotateX(${-dy * TILT}deg) scale3d(1.03,1.03,1.03)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) scale3d(1,1,1)';
             });
         });
 
